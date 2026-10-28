@@ -70,32 +70,33 @@ const steps = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f7f4] text-[#111111]">
+      
       {/* NAVIGATION */}
-      <nav className="border-b border-black/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+      <nav className="sticky top-0 z-50 border-b border-black/10 bg-[#f7f7f4]/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <a
             href="#top"
-            className="text-lg font-semibold tracking-tight"
+            className="text-lg font-semibold tracking-tight transition-opacity hover:opacity-70"
           >
             Your Brand
           </a>
 
           <div className="hidden items-center gap-8 text-sm md:flex">
-            <a href="#solutions" className="transition hover:opacity-60">
+            <a href="#solutions" className="transition-colors hover:text-[#536d8a]">
               Solutions
             </a>
-            <a href="#projects" className="transition hover:opacity-60">
+            <a href="#projects" className="transition-colors hover:text-[#536d8a]">
               Projects
             </a>
-            <a href="#process" className="transition hover:opacity-60">
+            <a href="#process" className="transition-colors hover:text-[#536d8a]">
               How we work
             </a>
-            <a href="#about" className="transition hover:opacity-60">
+            <a href="#about" className="transition-colors hover:text-[#536d8a]">
               About
             </a>
             <a
               href="#contact"
-              className="rounded-full bg-black px-5 py-2.5 text-white transition hover:bg-black/80"
+              className="rounded-full bg-[#171717] px-5 py-2.5 text-white transition-colors hover:bg-[#536d8a]"
             >
               Contact
             </a>
@@ -103,12 +104,13 @@ export default function Home() {
 
           <a
             href="#contact"
-            className="rounded-full bg-black px-4 py-2 text-sm text-white md:hidden"
+            className="rounded-full bg-[#171717] px-4 py-2 text-sm text-white transition-colors hover:bg-[#536d8a] md:hidden"
           >
             Contact
           </a>
         </div>
       </nav>
+
 
       {/* HERO */}
       <section id="top" className="mx-auto max-w-7xl px-6 pb-20 pt-20 lg:px-10 lg:pb-28 lg:pt-28">
