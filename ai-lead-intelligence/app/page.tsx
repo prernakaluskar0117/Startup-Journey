@@ -154,37 +154,82 @@ export default function Home() {
           </div>
 
 
-          {/* WORKFLOW VISUAL */}
-          <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
-            <p className="mb-8 text-xs font-medium uppercase tracking-[0.2em] text-black/40">
-              From manual work to automation
-            </p>
+          
+            {/* WORKFLOW VISUAL */}
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm sm:p-7">
+              <div className="mb-7 flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#536d8a]">
+                    How the system works
+                  </p>
+                  <h2 className="mt-2 text-lg font-semibold tracking-tight text-[#171717]">
+                    From input to action
+                  </h2>
+                </div>
 
-            <div className="space-y-3">
-              {[
-                ["01", "Lead / Data", "Information enters the business"],
-                ["02", "AI", "Information is understood"],
-                ["03", "Decision", "The system identifies what should happen"],
-                ["04", "Automation", "The workflow is triggered"],
-                ["05", "Action", "The right action happens"],
-              ].map(([number, title, description]) => (
-                <div
-                  key={number}
-                  className="rounded-2xl border border-black/10 bg-[#f7f7f4] p-4"
-                >
-                  <div className="flex items-start gap-4">
-                    <span className="text-xs text-black/35">{number}</span>
-                    <div>
-                      <p className="font-medium">{title}</p>
-                      <p className="mt-1 text-sm leading-6 text-black/50">
-                        {description}
+                <span className="rounded-full border border-[#536d8a]/20 bg-[#536d8a]/10 px-3 py-1.5 text-xs font-medium text-[#536d8a]">
+                  5 steps
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  {
+                    number: "01",
+                    title: "Lead / Data",
+                    description: "Information enters the business",
+                  },
+                  {
+                    number: "02",
+                    title: "AI Analysis",
+                    description: "The system understands the information",
+                  },
+                  {
+                    number: "03",
+                    title: "Decision",
+                    description: "The next action is identified",
+                  },
+                  {
+                    number: "04",
+                    title: "Automation",
+                    description: "The workflow is triggered",
+                  },
+                  {
+                    number: "05",
+                    title: "Action",
+                    description: "The right action happens",
+                  },
+                ].map((step) => (
+                  <div
+                    key={step.number}
+                    className="group flex items-start gap-4 rounded-2xl border border-black/10 bg-[#f7f7f4] p-4 transition-all duration-200 hover:border-[#536d8a]/40 hover:bg-[#eef2f6]"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-xs font-semibold text-[#536d8a] ring-1 ring-black/5">
+                      {step.number}
+                    </span>
+
+                    <div className="min-w-0 pt-0.5">
+                      <p className="font-medium text-[#171717]">
+                        {step.title}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-black/55">
+                        {step.description}
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-2xl bg-[#171717] p-4 text-white">
+                <p className="text-sm font-medium">
+                  Less manual work. More meaningful outcomes.
+                </p>
+                <p className="mt-1 text-xs leading-5 text-white/60">
+                  Practical AI systems designed around real business workflows.
+                </p>
+              </div>
             </div>
-          </div>
+
         </div>
       </section>
 
