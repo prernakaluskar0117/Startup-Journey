@@ -115,36 +115,44 @@ export default function Home() {
       {/* HERO */}
       <section id="top" className="mx-auto max-w-7xl px-6 pb-20 pt-20 lg:px-10 lg:pb-28 lg:pt-28">
         <div className="grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-          <div>
-            <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-black/50">
-              AI • Automation • Intelligent Systems
+          <div className="flex flex-col items-start">
+            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#536d8a]/20 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#536d8a]">
+              <span className="h-2 w-2 rounded-full bg-[#536d8a]" />
+              AI · Automation · Intelligent Systems
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
-              Turn repetitive work into intelligent workflows.
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-[#171717] sm:text-6xl lg:text-7xl xl:text-8xl">
+              Turn repetitive work into{" "}
+              <span className="text-[#536d8a]">intelligent workflows.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-black/60">
+            <p className="mt-7 max-w-xl text-base leading-7 text-black/65 sm:text-lg sm:leading-8">
               We build AI-powered systems that connect business processes,
-              tools and data — so teams spend less time on repetitive work.
+              tools and data — so your team spends less time on repetitive work
+              and more time on what matters.
             </p>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <a
                 href="#contact"
-                className="rounded-full bg-black px-7 py-3.5 text-center text-sm font-medium text-white transition hover:bg-black/80"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#171717] px-7 py-3.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#536d8a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#536d8a]"
               >
-                Talk to us
+                Talk to us <span className="ml-2" aria-hidden="true">↗</span>
               </a>
 
               <a
                 href="#projects"
-                className="rounded-full border border-black/15 px-7 py-3.5 text-center text-sm font-medium transition hover:bg-black hover:text-white"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-black/15 bg-white/50 px-7 py-3.5 text-sm font-medium text-[#171717] transition-colors duration-200 hover:border-[#536d8a]/40 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#536d8a]"
               >
                 See what we build
               </a>
             </div>
+
+            <p className="mt-6 text-sm text-black/45">
+              Practical AI. Thoughtful automation. Real business value.
+            </p>
           </div>
+
 
           {/* WORKFLOW VISUAL */}
           <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
